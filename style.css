@@ -78,6 +78,24 @@ section {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+/*btn_getstarted*/
+.getstarted{
+  font-size: 15px;
+  background-color: #ff6200; /* Initial color (blue) */
+  color: white;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/*Getstarted animation*/
+.getstarted:hover{
+  background-color:#f2c8a7 ;
+  transition: background-color 0.3s;
+
+}
 .btn:hover {
   transform: translateY(-2px);
 }
@@ -162,6 +180,13 @@ header {
   font-size: 22px;
   box-shadow: 3px 3px 0 var(--ink);
   transform: rotate(-6deg);
+}
+
+.logo-mark:hover{
+  transition: 0.3s ease ;
+  transform: scale(1.15); /* Scales image up by 15% */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Optional elevation shadow */
+
 }
 
 .small-logo {
