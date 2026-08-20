@@ -750,6 +750,7 @@ header {
 /*
 .price-compare {
   background: var(--white);
+  border: 2px solid var(--ink);
   border: 0px solid var(--ink);
   border-radius: var(--radius-lg);
   padding: 40px;
@@ -780,6 +781,9 @@ header {
 .old .amount {
   color: var(--ink-soft);
   text-decoration: line-through;
+  text-decoration-color: var(--orange);
+}
+
   text-decoration-color: rgb(248, 107, 52);
 }
 
