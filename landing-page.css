@@ -163,8 +163,22 @@ section {
   border: 1.5px dashed var(--ink);
 }
 
+#eyebrow{
+  display: inline-flex;
+  text-align: left;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px dashed var(--ink);
+}
+
 .light-eyebrow {
   border-color: rgba(255, 244, 232, 0.4);
+  text-align: left;
 }
 
 /* Navigation */
