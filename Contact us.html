@@ -1,0 +1,381 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us - Study Machan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">ScriptProcessorNode</script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary": "#006971",
+                      "surface-container": "#ffe9e2",
+                      "tertiary-container": "#00b5c3",
+                      "on-primary-fixed": "#380d00",
+                      "secondary": "#006b55",
+                      "on-surface": "#241915",
+                      "ink-text": "#2B1B12",
+                      "on-background": "#241915",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#4dd8e7",
+                      "surface-container-low": "#fff1ec",
+                      "primary-fixed-dim": "#ffb59a",
+                      "surface-bright": "#fff8f6",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-container": "#004146",
+                      "on-primary-container": "#6b2100",
+                      "on-primary-fixed-variant": "#802a00",
+                      "on-secondary-container": "#00725b",
+                      "on-secondary-fixed": "#002018",
+                      "background": "#fff8f6",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#f4ded7",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#ffede7",
+                      "surface-variant": "#f4ded7",
+                      "surface-container-high": "#fae4dd",
+                      "on-tertiary-fixed": "#001f23",
+                      "tertiary-fixed": "#88f3ff",
+                      "secondary-container": "#94f5d6",
+                      "teal-deep": "#146856",
+                      "outline-variant": "#dec0b6",
+                      "inverse-primary": "#ffb59a",
+                      "accent-yellow": "#FFC24B",
+                      "surface-dim": "#ebd6cf",
+                      "surface-tint": "#a43d0c",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#ffdbcf",
+                      "cream-bg": "#FFF4E8",
+                      "inverse-surface": "#3a2e29",
+                      "on-secondary-fixed-variant": "#005140",
+                      "on-surface-variant": "#57423a",
+                      "surface": "#fff8f6",
+                      "cream-deep": "#FFE9D3",
+                      "outline": "#8b7269",
+                      "border-line": "rgba(43, 27, 18, 0.12)",
+                      "secondary-fixed-dim": "#78d8ba",
+                      "secondary-fixed": "#94f5d6",
+                      "ink-soft": "#6B5646",
+                      "on-tertiary": "#ffffff",
+                      "orange-deep": "#E8672F",
+                      "on-tertiary-fixed-variant": "#004f56",
+                      "on-error-container": "#93000a",
+                      "primary": "#a43d0c",
+                      "primary-container": "#ff7f4c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "1rem",
+                      "margin-mobile": "1rem",
+                      "xs": "0.25rem",
+                      "sm": "0.5rem",
+                      "margin-desktop": "2.5rem",
+                      "lg": "1.5rem",
+                      "gutter": "1rem",
+                      "xl": "2rem"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-mono": [
+                              "Space Mono"
+                      ],
+                      "display-xl": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "button-text": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "button-text": [
+                              "16px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        #logo:hover{
+             transition: 0.3s ease ;
+             transform: scale(1.15); /* Scales image up by 15% */
+             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Optional elevation shadow */
+
+}
+        #logo{
+                width: 38px;
+                height: 38px;
+                border-radius: 11px;
+                background: var(--orange);
+                color: var(--white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: var(--font-display);
+                font-weight: 800;
+                font-size: 22px;
+                box-shadow: 3px 3px 0 var(--ink);
+                transform: rotate(-6deg);
+        }
+        /* Neo-brutalist Utilities */
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px #2B1B12;
+            transition: all 0.2s ease-in-out;
+        }
+        .brutal-shadow:active {
+            box-shadow: 0px 0px 0px 0px #2B1B12;
+            transform: translate(4px, 4px);
+        }
+        
+        .brutal-input:focus {
+            outline: none;
+            box-shadow: 4px 4px 0px 0px #2B1B12;
+        }
+        
+        .brutal-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 8px 8px 0px 0px #2B1B12;
+        }
+    </style>
+</head>
+<body class="bg-cream-bg text-ink-text font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar Component -->
+<header class="w-full sticky top-0 z-50 bg-cream-bg border-b-2 border-ink-text shadow-[4px_4px_0px_0px_#2B1B12]">
+<div class="flex justify-between items-center px-margin-desktop py-md max-w-[1200px] mx-auto">
+<a class="text-display-md font-display-md font-extrabold text-ink-text flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-orange-deep text-3xl" data-weight="fill"><img src="new logo.jpeg" id="logo" class="material-symbols-outlined text-orange-deep text-3xl" data-weight="FILL" height="40px" width="40px"></span>
+                StudyMachan
+            </a>
+<nav class="hidden md:flex items-center gap-lg">
+<a id='nav' class="text-ink-text hover:text-orange-deep font-body-md text-body-md hover:translate-y-[-2px] transition-transform" href="#">Home</a>
+<a id='nav' class="text-ink-text hover:text-orange-deep font-body-md text-body-md hover:translate-y-[-2px] transition-transform" href="#">Tutors</a>
+<a id='nav' class="text-ink-text hover:text-orange-deep font-body-md text-body-md hover:translate-y-[-2px] transition-transform" href="#">Courses</a>
+<a id='nav' class="text-ink-text hover:text-orange-deep font-body-md text-body-md hover:translate-y-[-2px] transition-transform" href="#">Resources</a>
+<a id='nav' class="text-ink-text hover:text-orange-deep font-body-md text-body-md hover:translate-y-[-2px] transition-transform" href="#">About</a>
+<!-- Active Item for Contact context if we had one in JSON, but Contact isn't there, so we highlight none or About -->
+</nav>
+<div class="flex items-center gap-md">
+<!--<button class="hidden md:block bg-orange-deep text-cream-bg font-button-text text-button-text px-lg py-sm rounded-full border-2 border-ink-text brutal-shadow">
+                    Get Started
+                </button>-->
+<button class="md:hidden text-ink-text">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-[1200px] mx-auto px-margin-desktop py-xl md:py-[4rem] text-center">
+<div class="inline-block border border-dashed border-ink-soft rounded-full px-sm py-xs mb-md">
+<span class="font-label-mono text-label-mono text-ink-soft uppercase">Contact Us</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-ink-text mb-md leading-tight">
+                We're here to <span class="text-orange-deep relative whitespace-nowrap">help
+                    <svg class="absolute w-full h-3 -bottom-1 left-0 text-orange-deep" preserveAspectRatio="none" viewBox="0 0 100 10">
+<path d="M0,5 Q50,10 100,5" fill="transparent" stroke="currentColor" stroke-width="4"></path>
+</svg>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-ink-soft max-w-2xl mx-auto">
+                Whether you're a student looking for a tutor or a teacher wanting to join, drop us a line. We'd love to hear from you.
+            </p>
+</section>
+<!-- Contact Split Section -->
+<section class="max-w-[1200px] mx-auto px-margin-desktop pb-xl md:pb-[6rem]">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-start">
+<!-- Left: Form -->
+<div class="bg-surface-container-highest rounded-[28px] border-2 border-ink-text shadow-[4px_4px_0px_0px_#2B1B12] p-lg md:p-[2.5rem]">
+<h2 class="font-display-md text-display-md text-ink-text mb-lg">Send a Message</h2>
+<form action="#" class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-button-text text-button-text text-ink-text" for="name">Your Name</label>
+<input class="w-full bg-surface-container-lowest border-2 border-ink-text rounded-full px-md py-sm font-body-md text-ink-text placeholder-ink-soft focus:outline-none focus:ring-0 focus:border-ink-text brutal-input transition-all" id="name" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-xs">
+<label class="font-button-text text-button-text text-ink-text" for="email">Email Address</label>
+<input class="w-full bg-surface-container-lowest border-2 border-ink-text rounded-full px-md py-sm font-body-md text-ink-text placeholder-ink-soft focus:outline-none focus:ring-0 focus:border-ink-text brutal-input transition-all" id="email" placeholder="john@example.com" type="email">
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-button-text text-button-text text-ink-text" for="subject">Subject</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border-2 border-ink-text rounded-full px-md py-sm font-body-md text-ink-text appearance-none focus:outline-none focus:ring-0 focus:border-ink-text brutal-input transition-all" id="subject">
+<option disabled="" selected="" value="">Select a topic...</option>
+<option value="student">Student Support</option>
+<option value="tutor">Tutor Application</option>
+<option value="business">Business Inquiry</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-ink-text">expand_more</span>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="font-button-text text-button-text text-ink-text" for="message">Message</label>
+<textarea class="w-full bg-surface-container-lowest border-2 border-ink-text rounded-[18px] px-md py-sm font-body-md text-ink-text placeholder-ink-soft resize-none focus:outline-none focus:ring-0 focus:border-ink-text brutal-input transition-all" id="message" placeholder="How can we help you today?" rows="5"></textarea>
+</div>
+<button class="w-full bg-orange-deep text-cream-bg font-button-text text-button-text px-lg py-md mt-sm rounded-full border-2 border-ink-text brutal-shadow flex justify-center items-center gap-2 group" type="submit">
+<span class="">Send Message</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</form>
+</div>
+<!-- Right: Contact Details -->
+
+<div class="space-y-lg">
+    <div class="mb-lg">
+        <h2 class="font-display-md text-display-md text-ink-text mb-sm">Get in Touch</h2>
+        <p class="font-body-md text-ink-soft">Have a specific question? Reach out to us directly.</p>
+    </div>
+    
+    <div class="space-y-md">
+        <!-- Email Card -->
+        <div class="bg-surface-container-lowest border-2 border-ink-text rounded-[18px] shadow-[4px_4px_0px_0px_#2B1B12] p-lg flex items-center gap-md">
+            <div class="bg-primary-container text-cream-bg rounded-full w-8 h-8 flex items-center justify-center border-2 border-ink-text">
+                <span class="material-symbols-outlined text-[20px]">mail</span>
+            </div>
+            <div>
+                <p class="font-label-mono text-label-mono text-ink-soft uppercase">Email Us</p>
+                <a href="mailto:hello@studymachan.lk" class="font-display-md text-[20px] text-orange-deep hover:text-ink-text transition-colors">hello@studymachan.lk</a>
+            </div>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="bg-surface-container-lowest border-2 border-ink-text rounded-[18px] shadow-[4px_4px_0px_0px_#2B1B12] p-lg flex items-center gap-md">
+            <div class="bg-primary-container text-cream-bg rounded-full w-8 h-8 flex items-center justify-center border-2 border-ink-text">
+                <span class="material-symbols-outlined text-[20px]">call</span>
+            </div>
+            <div>
+                <p class="font-label-mono text-label-mono text-ink-soft uppercase">Call Us</p>
+                <a href="tel:+94771234567" class="font-display-md text-[20px] text-orange-deep hover:text-ink-text transition-colors">+94 77 123 4567</a>
+            </div>
+        </div>
+    </div>
+</div></div>
+</section>
+<!-- FAQ Section (Bento/Card style) -->
+<section class="max-w-[1200px] mx-auto px-margin-desktop py-xl md:py-[6rem] border-t-2 border-ink-text border-dashed">
+<div class="text-center mb-xl">
+<div class="inline-block border border-dashed border-ink-soft rounded-full px-sm py-xs mb-md">
+<span class="font-label-mono text-label-mono text-ink-soft uppercase">FAQ</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-ink-text">Common Questions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<!-- FAQ Item 1 -->
+<div class="bg-surface-container-lowest border-2 border-ink-text rounded-[18px] shadow-[4px_4px_0px_0px_#2B1B12] p-lg">
+<div class="bg-primary-container text-cream-bg rounded-full w-8 h-8 flex items-center justify-center border-2 border-ink-text mb-md font-button-text">1</div>
+<h3 class="font-display-md text-[20px] leading-tight text-ink-text mb-sm">How do I book a session?</h3>
+<p class="font-body-md text-ink-soft">Simply browse our tutor directory, find a match, and click 'Book Session' on their profile. You can schedule based on their available slots.</p>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-surface-container-lowest border-2 border-ink-text rounded-[18px] shadow-[4px_4px_0px_0px_#2B1B12] p-lg">
+<div class="bg-primary-container text-cream-bg rounded-full w-8 h-8 flex items-center justify-center border-2 border-ink-text mb-md font-button-text">2</div>
+<h3 class="font-display-md text-[20px] leading-tight text-ink-text mb-sm">What if I need a refund?</h3>
+<p class="font-body-md text-ink-soft">We offer a 100% money-back guarantee for your first session if you're not satisfied. Contact support within 24 hours of the session.</p>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-surface-container-lowest border-2 border-ink-text rounded-[18px] shadow-[4px_4px_0px_0px_#2B1B12] p-lg md:col-span-2 lg:col-span-1">
+<div class="bg-primary-container text-cream-bg rounded-full w-8 h-8 flex items-center justify-center border-2 border-ink-text mb-md font-button-text">3</div>
+<h3 class="font-display-md text-[20px] leading-tight text-ink-text mb-sm">How do I become a verified tutor?</h3>
+<p class="font-body-md text-ink-soft">Submit an application via the 'Tutor Application' subject in the contact form. We require proof of qualifications and a brief interview process.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full mt-xl bg-surface-container-highest border-t-2 border-ink-text">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-xl max-w-[1200px] mx-auto gap-md">
+<div class="font-display-md text-display-md text-ink-text flex items-center gap-2">
+<span class="material-symbols-outlined text-orange-deep text-3xl" data-weight="fill">school</span>
+                Study Machan
+            </div>
+<div class="flex flex-wrap justify-center gap-md text-center">
+<a class="font-body-md text-body-md text-ink-soft hover:text-ink-text transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-ink-soft hover:text-ink-text transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-ink-soft hover:text-ink-text transition-colors" href="#">Cookie Policy</a>
+<a class="font-body-md text-body-md text-ink-soft hover:text-ink-text transition-colors" href="#">Support</a>
+</div>
+<div class="font-body-md text-body-md text-ink-soft">
+                © 2024 Study Machan. All rights reserved.
+            </div>
+</div>
+</footer>
+
+
+</body></html>
