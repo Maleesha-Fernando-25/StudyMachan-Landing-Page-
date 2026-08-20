@@ -63,17 +63,16 @@ ul {
 .wrap {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 30px;
 
 }
 
 .Browse-books{
   font-size: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section {
-  padding: 92px 0;
+  padding: 90px 0;
 }
 
 .btn {
@@ -522,14 +521,14 @@ header {
 }
 
 .section-head h2 {
-  font-family: var(--font-display);
+  
   font-size: clamp(30px, 3.6vw, 42px);
-  margin-top: 16px;
-  line-height: 1.08;
+  margin-top: 13px;
+  line-height: 1.8;
 }
 
 .section-head p {
-  color: var(--ink-soft);
+  /*color: var(--ink-soft);*/
   font-size: 17px;
   margin-top: 14px;
   line-height: 1.55;
