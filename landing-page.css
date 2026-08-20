@@ -664,8 +664,9 @@ header {
 }
 
 .pricing-card.featured {
-  border: 2px solid #10b981;
+  border: 3px solid #10b981;
   position: relative;
+  
 }
 
 .best-value-badge {
