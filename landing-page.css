@@ -661,6 +661,7 @@ header {
 .pricing-card.competitor {
   border: 1px solid #e5e7eb;
   opacity: 0.75;
+  color: #666;
 }
 
 .pricing-card.featured {
