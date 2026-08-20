@@ -3,118 +3,21 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Sign Up - Study Machan</title>
+<title>Sign Up - StudyMachan</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-container-high": "#fae4dd",
-                        "tertiary-container": "#00b5c3",
-                        "surface-dim": "#ebd6cf",
-                        "on-error": "#ffffff",
-                        "primary": "#a43d0c",
-                        "error": "#ba1a1a",
-                        "outline": "#8b7269",
-                        "orange-deep": "#E8672F",
-                        "on-tertiary": "#ffffff",
-                        "secondary": "#006b55",
-                        "ink-text": "#2B1B12",
-                        "inverse-on-surface": "#ffede7",
-                        "tertiary": "#006971",
-                        "tertiary-fixed": "#88f3ff",
-                        "on-tertiary-fixed": "#001f23",
-                        "cream-bg": "#FFF4E8",
-                        "surface-bright": "#fff8f6",
-                        "primary-fixed-dim": "#ffb59a",
-                        "error-container": "#ffdad6",
-                        "inverse-surface": "#3a2e29",
-                        "on-surface": "#241915",
-                        "background": "#fff8f6",
-                        "tertiary-fixed-dim": "#4dd8e7",
-                        "on-secondary-fixed-variant": "#005140",
-                        "border-line": "rgba(43, 27, 18, 0.12)",
-                        "surface-container-highest": "#f4ded7",
-                        "cream-deep": "#FFE9D3",
-                        "surface-variant": "#f4ded7",
-                        "on-tertiary-container": "#004146",
-                        "on-secondary-fixed": "#002018",
-                        "teal-deep": "#146856",
-                        "on-primary-container": "#6b2100",
-                        "primary-fixed": "#ffdbcf",
-                        "outline-variant": "#dec0b6",
-                        "on-surface-variant": "#57423a",
-                        "on-tertiary-fixed-variant": "#004f56",
-                        "on-error-container": "#93000a",
-                        "surface": "#fff8f6",
-                        "surface-container": "#ffe9e2",
-                        "surface-container-lowest": "#ffffff",
-                        "accent-yellow": "#FFC24B",
-                        "on-background": "#241915",
-                        "on-primary-fixed": "#380d00",
-                        "surface-container-low": "#fff1ec",
-                        "surface-tint": "#a43d0c",
-                        "secondary-container": "#94f5d6",
-                        "primary-container": "#ff7f4c",
-                        "on-secondary-container": "#00725b",
-                        "on-primary": "#ffffff",
-                        "ink-soft": "#6B5646",
-                        "inverse-primary": "#ffb59a",
-                        "secondary-fixed-dim": "#78d8ba",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed-variant": "#802a00",
-                        "secondary-fixed": "#94f5d6"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "2.5rem",
-                        "margin-mobile": "1rem",
-                        "md": "1rem",
-                        "gutter": "1rem",
-                        "sm": "0.5rem",
-                        "lg": "1.5rem",
-                        "xs": "0.25rem",
-                        "xl": "2rem"
-                    },
-                    "fontFamily": {
-                        "body-md": ["Plus Jakarta Sans"],
-                        "button-text": ["Plus Jakarta Sans"],
-                        "display-md": ["Plus Jakarta Sans"],
-                        "display-lg": ["Plus Jakarta Sans"],
-                        "body-lg": ["Plus Jakarta Sans"],
-                        "display-xl": ["Plus Jakarta Sans"],
-                        "label-mono": ["Space Mono"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "button-text": ["16px", { "lineHeight": "1", "fontWeight": "600" }],
-                        "display-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "display-lg": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "display-xl": ["48px", { "lineHeight": "1.1", "fontWeight": "800" }],
-                        "label-mono": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }]
-                    }
-                }
-            }
-        }
-    </script>
+<link rel="stylesheet" href="Signup.css">
+<!--<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet"/>-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>-->
+<script src="Signup.js">
+</script>
 </head>
 <body class="bg-cream-bg text-ink-text min-h-screen font-body-md antialiased overflow-x-hidden">
 <!-- Header (Suppressed Bottom Nav / App Bar for Transactional Screen, keeping Logo only as requested) -->
 <header class="absolute top-0 left-0 w-full px-margin-mobile md:px-margin-desktop py-md flex items-center z-50">
 <a class="flex items-center gap-2 group" href="#">
-<div class="w-10 h-10 bg-white border-2 border-ink-text rotate-[-6deg] flex items-center justify-center shadow-[2px_2px_0px_0px_#2B1B12] group-hover:rotate-0 transition-transform"><img alt="Study Machan Logo" class="w-full h-full object-contain p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTAYyQPWPyR0Labbis2c3Hmt59402DxYXzySetDBTQtcrU2QZK5u3YXduu9PhklJan6WcUk1VbMJgjqNbCEbfOQHpJL18L7oMUm0Y5kUIFpOJ5Qb-K_Q5lgRFpf7J--jf1p9B5gwtTntZGgU7QM-_6WB5dbuulrrc5fTlVNQeJLw8OeQuZ9xKf5LjoGxhWOhjKK6Q27-dZtqMBKs0vQU3eYB7-jfIvx9i5EluUp8RZaMXy5FeA-FKb8AQLg0TvBJUT5w"/></div>
-<span class="font-display-md text-display-md font-bold tracking-tight">Study Machan</span>
+<div class="Logo"><img alt="StudyMachan Logo"  src="new logo.jpeg" /></div>
+<span class="font-display-md text-display-md font-bold tracking-tight">StudyMachan</span>
 </a>
 </header>
 <!-- Main Content -->
@@ -149,15 +52,15 @@
 </div>
 </div>
 <!-- Visual Element: Map Context -->
-<div class="relative w-full max-w-sm rounded-[28px] border-2 border-ink-text bg-white p-4 shadow-[4px_4px_0px_0px_#2B1B12] overflow-hidden group">
+<!--<div class="relative w-full max-w-sm rounded-[28px] border-2 border-ink-text bg-white p-4 shadow-[4px_4px_0px_0px_#2B1B12] overflow-hidden group">
 <div class="absolute inset-0 bg-[radial-gradient(#8b7269_1px,transparent_1px)] [background-size:16px_16px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
 <div class="relative z-10 flex items-center gap-3">
 <div class="w-12 h-12 rounded-full bg-cream-bg border-2 border-ink-text flex items-center justify-center">
-<span class="material-symbols-outlined text-orange-deep" style="font-variation-settings: 'FILL' 1;">location_on</span>
-</div>
-<div>
-<div class="font-label-mono text-label-mono text-xs text-ink-soft mb-1 uppercase tracking-wider">Book like a ride</div>
-<div class="font-button-text text-button-text">Find tutors near you</div>
+<!-<span class="material-symbols-outlined text-orange-deep" style="font-variation-settings: 'FILL' 1;">location_on</span>-->
+
+<!--<div>
+<!--<div class="font-label-mono text-label-mono text-xs text-ink-soft mb-1 uppercase tracking-wider">Book like a ride</div>
+<div class="font-button-text text-button-text">Find tutors near you</div>-->
 </div>
 </div>
 </div>
@@ -184,12 +87,6 @@
 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
 </svg>
                         Continue with Google
-                    </button>
-<button class="w-full bg-white border-2 border-ink-text rounded-full py-3 px-4 flex items-center justify-center gap-3 shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-surface-bright active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all font-button-text text-button-text">
-<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"></path>
-</svg>
-                        Continue with Apple
                     </button>
 </div>
 <!-- Divider -->
