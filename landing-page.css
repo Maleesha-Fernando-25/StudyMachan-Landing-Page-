@@ -55,10 +55,21 @@ ul {
   list-style: none;
 }
 
+/*h2{
+  font-style: bold;
+  font-family: ;
+}*/
+
 .wrap {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 32px;
+
+}
+
+.Browse-books{
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 section {
