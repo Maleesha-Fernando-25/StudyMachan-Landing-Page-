@@ -211,6 +211,45 @@
             transform: translateY(-4px);
             box-shadow: 8px 8px 0px 0px #2B1B12;
         }
+
+        /* Mobile Sidebar Navigation */
+        #mobile-sidebar-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(43, 27, 18, 0.5);
+            z-index: 60;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease-in-out;
+        }
+        #mobile-sidebar-overlay.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 78%;
+            max-width: 320px;
+            background: #FFF4E8;
+            border-left: 2px solid #2B1B12;
+            box-shadow: -4px 0px 0px 0px #2B1B12;
+            z-index: 61;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+        }
+        #mobile-sidebar.open {
+            transform: translateX(0);
+        }
+
+        body.sidebar-open {
+            overflow: hidden;
+        }
     </style>
 </head>
 <body class="bg-cream-bg text-ink-text font-body-md min-h-screen flex flex-col">
@@ -238,12 +277,34 @@
 <!--<button class="hidden md:block bg-orange-deep text-cream-bg font-button-text text-button-text px-lg py-sm rounded-full border-2 border-ink-text brutal-shadow">
                     Get Started
                 </button>-->
-<button class="md:hidden text-ink-text">
+<button id="mobile-menu-btn" class="md:hidden text-ink-text" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-sidebar">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </div>
 </header>
+
+<!-- Mobile Sidebar Overlay + Panel -->
+<div id="mobile-sidebar-overlay"></div>
+<aside id="mobile-sidebar" aria-label="Mobile navigation">
+<div class="flex justify-between items-center px-margin-mobile py-md border-b-2 border-ink-text">
+<span class="font-display-md text-display-md text-ink-text flex items-center gap-2">
+<img src="new logo.jpeg" height="32" width="32" style="border-radius:8px;">
+StudyMachan
+</span>
+<button id="mobile-menu-close" class="text-ink-text" aria-label="Close menu">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-sm px-margin-mobile py-lg">
+<a class="text-ink-text hover:text-orange-deep font-body-md text-body-lg py-sm border-b border-border-line" href="#">Home</a>
+<a class="text-ink-text hover:text-orange-deep font-body-md text-body-lg py-sm border-b border-border-line" href="#">Tutors</a>
+<a class="text-ink-text hover:text-orange-deep font-body-md text-body-lg py-sm border-b border-border-line" href="#">Courses</a>
+<a class="text-ink-text hover:text-orange-deep font-body-md text-body-lg py-sm border-b border-border-line" href="#">Resources</a>
+<a class="text-ink-text hover:text-orange-deep font-body-md text-body-lg py-sm border-b border-border-line" href="#">About</a>
+</nav>
+</aside>
+
 <main class="flex-grow">
 <!-- Hero Section -->
 <section class="max-w-[1200px] mx-auto px-margin-desktop py-xl md:py-[4rem] text-center">
@@ -382,5 +443,43 @@
 </div>
 </footer>
 
+<script>
+    (function () {
+        var menuBtn = document.getElementById('mobile-menu-btn');
+        var closeBtn = document.getElementById('mobile-menu-close');
+        var overlay = document.getElementById('mobile-sidebar-overlay');
+        var sidebar = document.getElementById('mobile-sidebar');
+
+        function openSidebar() {
+            overlay.classList.add('open');
+            sidebar.classList.add('open');
+            document.body.classList.add('sidebar-open');
+            menuBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeSidebar() {
+            overlay.classList.remove('open');
+            sidebar.classList.remove('open');
+            document.body.classList.remove('sidebar-open');
+            menuBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        menuBtn.addEventListener('click', openSidebar);
+        closeBtn.addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+
+        // Close sidebar when a nav link inside it is clicked
+        sidebar.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', closeSidebar);
+        });
+
+        // Close if window resizes back to desktop
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 768) {
+                closeSidebar();
+            }
+        });
+    })();
+</script>
 
 </body></html>
