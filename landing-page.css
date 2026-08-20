@@ -439,6 +439,10 @@ header {
   color: var(--ink-soft);
 }
 
+.price-col{
+  box-shadow: #090706;
+}
+
 .price-tag {
   font-family: var(--font-display);
   font-weight: 700;
@@ -576,6 +580,7 @@ header {
 .price-compare {
   background: var(--white);
   border: 2px solid var(--ink);
+  border: 0px solid var(--ink);
   border-radius: var(--radius-lg);
   padding: 40px;
   display: grid;
@@ -608,9 +613,34 @@ header {
   text-decoration-color: var(--orange);
 }
 
+  text-decoration-color: rgb(248, 107, 52);
+}
+
+.new{
+  box-shadow: #090706;
+}
 .new .amount {
   color: var(--teal-deep);
 }
+
+/*800 amount additional stayle*/
+.amount2{
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 800;
+}
+.amount2:hover{
+    border-color: #46423f;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out ;
+    transform: scale(1.15); /* Scales image up by 15% */
+    box-shadow: 0 20px px rgba(0, 0, 0, 0.3); /* Optional elevation shadow */
+}
+
+.amount2::shadow{
+  box-shadow: #090706;
+}
+
 
 .note {
   font-size: 13px;
@@ -686,6 +716,9 @@ header {
   line-height: 1.5;
   color: rgba(255, 244, 232, 0.65);
 }
+
+
+/*samples*/
 
 /* Focus mode */
 
