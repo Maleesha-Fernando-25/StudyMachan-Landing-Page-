@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Dashboard - StudyMachan</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="Signup.css">
+  <script src="Signup.js"></script>
+</head>
+<body class="bg-cream-bg text-ink-text min-h-screen font-body-md antialiased overflow-x-hidden">
+  
+  <!-- Loading Splash while verifying session -->
+  <div id="auth-loading" class="fixed inset-0 bg-cream-bg flex flex-col items-center justify-center z-50 transition-opacity duration-300">
+    <div class="Logo mb-4 animate-bounce">
+      <img alt="StudyMachan Logo" src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="w-16 h-16 rounded-full border-2 border-ink-text shadow-[4px_4px_0px_0px_#2B1B12]" />
+    </div>
+    <p class="font-display-md text-xl font-bold">Connecting to StudyMachan...</p>
+  </div>
+
+  <!-- Dashboard Container (shown once authenticated) -->
+  <div id="dashboard-content" class="hidden min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="w-full bg-white border-b-2 border-ink-text px-margin-mobile md:px-margin-desktop py-4 flex items-center justify-between sticky top-0 z-40 shadow-[0px_4px_0px_0px_rgba(43,27,18,0.06)]">
+      <a class="flex items-center gap-2 group" href="landing-page.html">
+        <div class="Logo">
+          <img alt="StudyMachan Logo" src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="w-9 h-9 rounded-full border-2 border-ink-text" />
+        </div>
+        <span class="font-display-md text-display-md font-bold tracking-tight text-xl">StudyMachan</span>
+      </a>
+
+      <div class="flex items-center gap-3 md:gap-4">
+        <!-- Switch to Tutor Desk -->
+        <a href="tutor-dashboard.html" class="hidden md:flex items-center gap-1.5 text-xs font-button-text text-ink-soft hover:text-orange-deep transition-colors underline decoration-1 underline-offset-2">
+          Switch to Tutor View
+        </a>
+
+        <!-- User Info Chip -->
+        <div class="hidden sm:flex items-center gap-2 bg-cream-bg border-2 border-ink-text rounded-full px-3.5 py-1.5 shadow-[2px_2px_0px_0px_#2B1B12]">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#146856]"></span>
+          <span id="user-email-display" class="font-button-text text-xs text-ink-text max-w-[200px] truncate">user@email.com</span>
+        </div>
+
+        <!-- Logout Button -->
+        <button id="logout-btn" type="button" class="bg-white hover:bg-surface-bright text-ink-text border-2 border-ink-text rounded-full px-4 py-2 font-button-text text-sm shadow-[2px_2px_0px_0px_#2B1B12] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all flex items-center gap-2">
+          <svg class="w-4 h-4 text-orange-deep" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+          </svg>
+          <span>Log out</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Dashboard Area -->
+    <main class="flex-1 w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-8 md:py-12">
+      <!-- Welcome Hero Banner -->
+      <div class="bg-white rounded-[28px] border-2 border-ink-text p-6 md:p-10 shadow-[8px_8px_0px_0px_#2B1B12] relative overflow-hidden mb-10">
+        <div class="absolute -top-6 -right-6 w-24 h-12 bg-accent-yellow/40 border border-ink-text/20 rotate-45 z-10 hidden md:block"></div>
+
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 bg-[#94F5D6] text-[#005140] border-2 border-ink-text rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider mb-4 shadow-[2px_2px_0px_0px_#2B1B12]">
+              <span>✓</span> Verified Account
+            </div>
+            <h1 class="font-display-xl text-3xl md:text-4xl font-extrabold mb-2 text-ink-text">
+              Welcome to your StudyMachan desk!
+            </h1>
+            <p class="font-body-md text-ink-soft max-w-xl">
+              You are signed in as <strong id="user-welcome-email" class="text-orange-deep"></strong>. Browse great local tutors, book sessions, or join your virtual classroom.
+            </p>
+          </div>
+
+          <!-- Quick Action CTA -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="landing-page.html#how" class="bg-accent-yellow text-ink-text border-2 border-ink-text rounded-full px-6 py-3.5 font-display-md text-base text-center shadow-[4px_4px_0px_0px_#2B1B12] hover:bg-yellow-400 active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all">
+              Find Tutors Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <!-- Card 1: Book a Tutor -->
+        <div class="bg-white rounded-[24px] border-2 border-ink-text p-6 shadow-[6px_6px_0px_0px_#2B1B12] flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-accent-yellow border-2 border-ink-text flex items-center justify-center font-bold text-xl mb-4 shadow-[2px_2px_0px_0px_#2B1B12]">
+              📚
+            </div>
+            <h2 class="font-display-md text-xl font-bold mb-2">Book a Tutor</h2>
+            <p class="font-body-md text-sm text-ink-soft mb-6">
+              Browse over 3,600+ verified undergraduate & professional tutors for A/L, O/L, and university coursework.
+            </p>
+          </div>
+          <a href="landing-page.html#pricing" class="w-full bg-orange-deep text-white border-2 border-ink-text rounded-full py-2.5 px-4 text-center font-button-text text-sm shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-primary transition-all">
+            Browse Subjects &rarr;
+          </a>
+        </div>
+
+        <!-- Card 2: Upcoming Sessions -->
+        <div class="bg-white rounded-[24px] border-2 border-ink-text p-6 shadow-[6px_6px_0px_0px_#2B1B12] flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-[#94F5D6] border-2 border-ink-text flex items-center justify-center font-bold text-xl mb-4 shadow-[2px_2px_0px_0px_#2B1B12]">
+              🗓️
+            </div>
+            <h2 class="font-display-md text-xl font-bold mb-2">My Sessions</h2>
+            <p class="font-body-md text-sm text-ink-soft mb-6">
+              You currently have no scheduled sessions. Book your first 1-on-1 tutoring session today.
+            </p>
+          </div>
+          <a href="landing-page.html#how" class="w-full bg-cream-bg text-ink-text border-2 border-ink-text rounded-full py-2.5 px-4 text-center font-button-text text-sm shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-surface-bright transition-all">
+            View Schedule &rarr;
+          </a>
+        </div>
+
+        <!-- Card 3: Help & Support -->
+        <div class="bg-white rounded-[24px] border-2 border-ink-text p-6 shadow-[6px_6px_0px_0px_#2B1B12] flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-full bg-cream-deep border-2 border-ink-text flex items-center justify-center font-bold text-xl mb-4 shadow-[2px_2px_0px_0px_#2B1B12]">
+              💬
+            </div>
+            <h2 class="font-display-md text-xl font-bold mb-2">Contact StudyMachan</h2>
+            <p class="font-body-md text-sm text-ink-soft mb-6">
+              Have questions about tutor rates, focus mode, or need academic counseling? Reach our team anytime.
+            </p>
+          </div>
+          <a href="Contact us.html" class="w-full bg-white text-ink-text border-2 border-ink-text rounded-full py-2.5 px-4 text-center font-button-text text-sm shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-surface-bright transition-all">
+            Get Support &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Account Info Section -->
+      <div class="bg-cream-deep/60 rounded-[24px] border-2 border-ink-text p-6 shadow-[4px_4px_0px_0px_#2B1B12] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-teal-deep text-white border-2 border-ink-text flex items-center justify-center font-bold text-lg">
+            🎓
+          </div>
+          <div>
+            <h3 class="font-display-md text-base font-bold">Firebase Authentication Active</h3>
+            <p class="font-body-md text-xs text-ink-soft">Session secured with Firebase Auth (studymachan-7)</p>
+          </div>
+        </div>
+        <button id="logout-btn-secondary" class="bg-white border-2 border-ink-text rounded-full px-5 py-2 font-button-text text-xs shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-surface-bright transition-all">
+          Sign out
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t-2 border-ink-text/10 bg-white/40 py-6 px-margin-mobile text-center text-xs text-ink-soft">
+      © 2026 StudyMachan. Affordable tutoring for everyone.
+    </footer>
+  </div>
+
+  <!-- Auth Verification & Guard Script -->
+  <script type="module">
+    import { auth, logout } from "./firebase-auth.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+
+    const authLoading = document.getElementById("auth-loading");
+    const dashboardContent = document.getElementById("dashboard-content");
+    const userEmailDisplay = document.getElementById("user-email-display");
+    const userWelcomeEmail = document.getElementById("user-welcome-email");
+    const logoutBtn = document.getElementById("logout-btn");
+    const logoutBtnSecondary = document.getElementById("logout-btn-secondary");
+
+    // Guard: Listen for Firebase auth state
+    onAuthStateChanged(auth, (user) => {
+      if (user && (user.emailVerified || user.providerData.some(p => p.providerId === 'google.com'))) {
+        // Authenticated and verified
+        userEmailDisplay.textContent = user.email || "Verified User";
+        userWelcomeEmail.textContent = user.email || "Student";
+        authLoading.classList.add("opacity-0", "pointer-events-none");
+        setTimeout(() => {
+          authLoading.classList.add("hidden");
+          dashboardContent.classList.remove("hidden");
+        }, 200);
+      } else {
+        // Not authenticated or not verified -> return to auth screen
+        window.location.href = "signup.html";
+      }
+    });
+
+    // Logout triggers
+    logoutBtn.addEventListener("click", () => {
+      logout();
+    });
+
+    if (logoutBtnSecondary) {
+      logoutBtnSecondary.addEventListener("click", () => {
+        logout();
+      });
+    }
+  </script>
+</body>
+</html>
