@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMachan — Book a great tutor, not a big name.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+-->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS for samples -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">-->
+
+  <link rel="stylesheet" href="landing-page.css">
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <div class="logo">
+        <img src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="logo-mark"/>
+        StudyMachan
+      </div>
+
+      <nav class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#safety">Trust & safety</a>
+        <a href="#focus">Focus mode</a>
+        <a href="#audience">Who it's for</a>
+      </nav>
+      <!-- Slide Panel Trigger Button -->
+      <div class="nav-cta">
+        <button id="open-slide-btn" type="button" aria-label="Open Log in and Contact menu" class="inline-flex items-center gap-2 bg-white border-2 border-[#2B1B12] rounded-full px-4 py-2 text-sm font-bold text-[#2B1B12] shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-[#FFE9D3] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all cursor-pointer">
+          <svg class="w-5 h-5 text-[#2B1B12]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span>Menu</span>
+        </button>
+      </div>
+
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Book a tutor, like booking a ride</span>
+
+          <h1>
+            Book a great tutor.<br>
+            Not a <span class="hl">big name</span>.
+          </h1>
+
+          <p class="lead">
+            Skip the overpriced group tuition class. Book a verified tutor —
+            undergrad or professional — online or in person, for a fraction of
+            the cost.
+          </p>
+
+          <div class="hero-cta">
+            <a href="signup.html" class="btn btn-primary">Sign up free</a>
+            <a href="#how" class="btn btn-ghost">See how it works</a>
+          </div>
+
+          <div class="trust-row">
+            <span><strong>12,400+</strong> students</span>
+            <span><strong>3,600+</strong> tutors</span>
+            <span class="verified-chip">Every tutor verified</span>
+          </div>
+        </div>
+
+        <div class="hero-card-wrapper">
+          <div class="book-card">
+            <div class="sticker s1">DELIVERED<br>TO YOU</div>
+            <div class="sticker s2">PAID</div>
+
+            <div class="book-map">
+              <div class="route-line"></div>
+              <div class="pin start"><span>Home</span></div>
+              <div class="tutor-dot"></div>
+              <div class="pin end"><span>Tutor</span></div>
+              <div class="eta-chip">Tutor · 8 min away</div>
+            </div>
+
+            <div class="booking-row">
+              <div class="booking-who">
+                <div class="avatar-circle">RS</div>
+                <div>
+                  <div class="booking-name">Ranil S.</div>
+                  <div class="booking-sub">A/L Combined Maths · 4.9★</div>
+                </div>
+              </div>
+              <div class="price-tag">Rs. 800</div>
+            </div>
+
+            <div class="booking-row">
+              <div class="booking-who">
+                <div class="avatar-circle teal-avatar">1:1</div>
+                <div>
+                  <div class="booking-name">Session type</div>
+                  <div class="booking-sub">In person · 1 hour</div>
+                </div>
+              </div>
+              <div class="compare-price">vs Rs. 3,500 class</div>
+            </div>
+
+            <div class="status-pill">
+              <span class="dot"></span>
+              Tutor accepted — on the way
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">The flow</span><br>
+          <h2 class="Browse-books" style="background-color: transparent; position:relative;font-size:34.5px; text-align: center; font-family:Arial;"><b>Getting a tutor shouldn't be a project.</b></h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h3>Browse</h3>
+            <p>Check tutor profiles, subjects, education, achievements, ratings, and sample classes.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <h3>Book</h3>
+            <p>Pick one-to-one or small group sessions, choose online or physical learning, then select a time.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <h3>Learn & pay</h3>
+            <p>Complete the session and make secure payment through the StudyMachan platform.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--Price comparison-->
+
+<section class="pricing-section">
+    <div id="eyebrow" >THE MATH CHECKS OUT</div>
+    <h1 style="font-size: 30px;"><b>You're not paying for a brand. Just good teaching.</b></h1>
+
+    <div class="pricing-container">
+      <!-- Competitor Pricing -->
+      <div class="pricing-card competitor">
+        <h4>Typical Group Tuition Class</h4>
+        <div class="price">Rs. 3,500<span>/mo</span></div>
+        <ul>
+          <li>✖ 100+ students crammed in a hot hall</li>
+          <li>✖ Zero 1-on-1 attention or custom questions</li>
+          <li>✖ Fixed rigid time slots — miss it and it's gone</li>
+        </ul>
+      </div>
+
+      <div class="vs-circle">VS</div>
+
+      <!-- Study Machan Pricing -->
+      <div class="pricing-card featured">
+        <div class="best-value-badge">BEST VALUE</div>
+        <h4>Study Machan Tutors</h4>
+        <div class="price green-text">Rs. 800 <span>/ hour</span></div>
+        <ul>
+          <li>✓ Focused 1-on-1 support just for you</li>
+          <li>✓ Ask unlimited questions until you get it</li>
+          <li>✓ In-person at your home or interactive online</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+    <section id="safety">
+      <div class="wrap">
+        <div class="safety-band">
+          <div class="safety-head">
+            <span class="eyebrow light-eyebrow">Built to be trusted</span>
+            <h2>Low price doesn't mean low standards.</h2>
+            <p>
+              Every tutor is checked before joining the platform, and sessions
+              are managed through ratings, schedules, and secure payments.
+            </p>
+          </div>
+
+          <div class="safety-grid">
+            <div class="safety-card">
+              <div class="safety-icon">✓</div>
+              <h3>Verified Tutors</h3>
+              <p>Each tutor is checked before they are allowed to take bookings.</p>
+            </div>
+
+            <div class="safety-card">
+              <div class="safety-icon">ID</div>
+              <h3>Real credentials</h3>
+              <p>Education, achievements, and subjects are shown clearly in profiles.</p>
+            </div>
+
+            <div class="safety-card">
+              <div class="safety-icon">⌚</div>
+              <h3>Tracked sessions</h3>
+              <p>Bookings and attendance can be managed through the app.</p>
+            </div>
+
+            <div class="safety-card">
+              <div class="safety-icon">★</div>
+              <h3>Ratings and reviews</h3>
+              <p>Students can rate tutors after sessions to build trust.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="bg-brand-cream py-24 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto">
+<!-- Header -->
+<div class="mb-12">
+<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3 text-brand-ink">Watch a class before you pay for one</h2>
+<p class="text-lg text-gray-700">Browse free recorded micro-lessons from our actual top-rated tutors.</p>
+</div>
+<!-- Video Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Video Card 1 -->
+<div class="bg-white border-2 border-brand-ink rounded-2xl overflow-hidden shadow-hard flex flex-col group cursor-pointer">
+<div class="relative h-48 bg-gray-200 border-b-2 border-brand-ink overflow-hidden">
+<img alt="Limits, explained simply" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK7H_6IN06G7P9OewQPvI4lvKMiOmPdM232-BIm5Joku17-vUOi50UVTNdx4wMqHyvBqt26-2fWBh2BglhuonRB_6dvOS6iNZPtW-Q5svYK-rhbzJ2hMxjPBmxniBo-FTqAkUuB4xmCjA3BK-8x7PJk9UxBM432kV_uQKOTf-1MNQagrMrAYpiSQGqAaibwlB3Kwx99xe89RtFzKmSus7Llo-lSx5XVUljhxb6o7baIDDEkEiN4tno"/>
+<div class="absolute top-3 left-3 bg-yellow-400 border-2 border-brand-ink text-xs font-bold px-2 py-1 rounded shadow-hard-sm uppercase">Free Sample</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-brand-orange border-2 border-brand-ink rounded-full flex items-center justify-center shadow-hard-sm group-hover:scale-110 transition-transform">
+<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="p-5 flex-grow">
+<h3 class="font-bold text-lg text-brand-ink mb-1 group-hover:text-brand-orange transition-colors">Limits, explained simply</h3>
+<p class="text-sm text-gray-600">Priya K. • A/L Combined Maths</p>
+</div>
+</div>
+<!-- Video Card 2 -->
+<div class="bg-white border-2 border-brand-ink rounded-2xl overflow-hidden shadow-hard flex flex-col group cursor-pointer">
+<div class="relative h-48 bg-blue-100 border-b-2 border-brand-ink overflow-hidden">
+<img alt="Organic reaction mechanisms" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx6_kng1-w9B2woH7Px6Cu5f-6o_mtrDEOOCfb72sNZUiTNvbholv8HYvu1mEC2jHHyUVF0clxhLdpuAqkTr3MUfYNrpuGoW2ZdHVnnk3gfj_g2a-xGAmZ2IJ6f7jTbrrTg5KKR8MqhYzVW81OMISDUnTp__U2557pHW7DBR5REURSJex-0DjrJiodS6L6lUrZxwdmOahJuuCDdAoCWJ3GXG_eVQaymVOwoYpIrWc2xuxoDpxntCcY"/>
+<div class="absolute top-3 left-3 bg-yellow-400 border-2 border-brand-ink text-xs font-bold px-2 py-1 rounded shadow-hard-sm uppercase">Free Sample</div>
+<div class="absolute top-3 right-3 bg-white border-2 border-brand-ink text-xs font-bold px-2 py-1 rounded shadow-hard-sm">CHEMICAL BONDS</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-brand-orange border-2 border-brand-ink rounded-full flex items-center justify-center shadow-hard-sm group-hover:scale-110 transition-transform">
+<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewbox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="p-5 flex-grow">
+<h3 class="font-bold text-lg text-brand-ink mb-1 group-hover:text-brand-orange transition-colors">Organic reaction mechanisms</h3>
+<p class="text-sm text-gray-600">Dr. Silva • A/L Chemistry</p>
+</div>
+</div>
+<!-- Video Card 3 -->
+<div class="bg-white border-2 border-brand-ink rounded-2xl overflow-hidden shadow-hard flex flex-col group cursor-pointer">
+<div class="relative h-48 bg-gray-200 border-b-2 border-brand-ink overflow-hidden">
+<img alt="Intro to data structures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPjvhIhu10hXU7eeQtsGKPF47MjfsYcET_rC3r2wYOQEIm19A0B-1baRee2D6x46hcFmSZq4qe9uw3OGXfRFsa_3KPq9NubmdtAuRlu1krTdwdi5HYAO_Q8vR9Jn-iZOgnNYgPPJDOuk62z0hdHIukWEJHk_gSl84gDHNjEYeQQl1qHp9dn8VR3tdU2duDh6ZPVblcb-UYelugculPb8GsoVKBFEmFQyiJaR07QOOFtcF3fladRVmk"/>
+<div class="absolute top-3 left-3 bg-yellow-400 border-2 border-brand-ink text-xs font-bold px-2 py-1 rounded shadow-hard-sm uppercase">Free Sample</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-brand-orange border-2 border-brand-ink rounded-full flex items-center justify-center shadow-hard-sm group-hover:scale-110 transition-transform">
+<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd"></path>
+</svg>
+</div>
+</div>
+</div>
+<div class="p-5 flex-grow">
+<h3 class="font-bold text-lg text-brand-ink mb-1 group-hover:text-brand-orange transition-colors">Intro to data structures</h3>
+<p class="text-sm text-gray-600">Nimesh F. • O/L ICT</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+    <section class="focus-section" id="focus">
+      <div class="wrap focus-wrap">
+        <div class="focus-grid">
+          <div class="focus-copy">
+            <span class="eyebrow">Always free</span>
+            <h2>Not booking a session? Study together anyway.</h2>
+            <p>
+              Focus mode is a free shared study timer. Students can enter,
+              set a timer, and study alongside other learners.
+            </p>
+
+            <div class="focus-tags">
+              <span>Free</span>
+              <span>No booking needed</span>
+              <span>Shared timer</span>
+              <span>Text only</span>
+            </div>
+
+            <a href="#signup" class="btn btn-ghost">Try focus mode</a>
+          </div>
+
+          <div class="focus-widget">
+            <div class="focus-label">FOCUS TAB</div>
+            <div class="timer-display">25:00</div>
+            <div class="timer-label">FOCUS SESSION IN PROGRESS</div>
+
+            <div class="focus-avatars">
+              <div class="avatar-circle">DS</div>
+              <div class="avatar-circle">RK</div>
+              <div class="avatar-circle">+4</div>
+            </div>
+
+            <div class="focus-caption">6 students studying with you right now</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience" id="audience">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Built for everyone</span>
+          <h2>Whoever you are, there is a place for you.</h2>
+        </div>
+
+        <div class="tab-row">
+          <button class="tab-btn active" data-tab="students">For students</button>
+          <button class="tab-btn" data-tab="tutors">For tutors</button>
+          <button class="tab-btn" data-tab="institutions">For institutions</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="students">
+          <div>
+            <h3>Skip the class fee. Book the tutor.</h3>
+            <p>
+              Students can find affordable tutors, view ratings, choose time
+              slots, and book sessions based on their needs.
+            </p>
+
+            <ul class="tick-list">
+              <li>Watch sample classes before booking</li>
+              <li>Book online or physical sessions</li>
+              <li>Use free focus mode anytime</li>
+            </ul>
+
+            <a href="#signup" class="btn btn-primary">Sign up as a student</a>
+          </div>
+
+          <div class="tab-visual">
+            <div class="stat-card">
+              <span class="num">4.9★</span>
+              <span class="label">Average tutor rating</span>
+            </div>
+            <div class="stat-card">
+              <span class="num">77%</span>
+              <span class="label">Possible cost saving</span>
+            </div>
+            <div class="stat-card">
+              <span class="num">42</span>
+              <span class="label">Subjects covered</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="tutors">
+          <div>
+            <h3>Get booked. Get paid.</h3>
+            <p>
+              Tutors can create profiles, set subjects and available hours,
+              manage bookings, receive ratings, and get payments securely.
+            </p>
+
+            <ul class="tick-list">
+              <li>Set your own subjects, price, and available time slots</li>
+              <li>Build your reputation using ratings and reviews</li>
+              <li>Receive payment after completed sessions</li>
+            </ul>
+
+            <a href="#signup" class="btn btn-primary tutor-button">Become a tutor</a>
+          </div>
+
+          <div class="tab-visual">
+            <div class="stat-card">
+              <span class="num">3,600+</span>
+              <span class="label">Active tutors</span>
+            </div>
+            <div class="stat-card">
+              <span class="num">Rs. 0</span>
+              <span class="label">To create a profile</span>
+            </div>
+            <div class="stat-card">
+              <span class="num">18k+</span>
+              <span class="label">Sessions taught</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" data-panel="institutions">
+          <div>
+            <h3>Affordable tutoring for more students.</h3>
+            <p>
+              Schools and universities can connect their communities with
+              verified tutors and lower-cost academic support.
+            </p>
+
+            <ul class="tick-list">
+              <li>Verified tutor pool</li>
+              <li>Student engagement data</li>
+              <li>Affordable learning support</li>
+            </ul>
+
+            <a href="#signup" class="btn btn-primary institution-button">Book a demo</a>
+          </div>
+
+          <div class="tab-visual">
+            <div class="stat-card">
+              <span class="num">60+</span>
+              <span class="label">Partner institutions</span>
+            </div>
+            <div class="stat-card">
+              <span class="num">92%</span>
+              <span class="label">Engagement increase</span>
+            </div>
+            <div class="stat-card">
+              <span class="num">24/7</span>
+              <span class="label">Learning support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="signup">
+      <div class="wrap">
+        <div class="final-cta">
+          <span class="eyebrow light-eyebrow">Ready when you are</span>
+          <h2>Stop paying for the name.<br>Start paying for the teaching.</h2>
+          <p>Join free, browse tutors, and book your first session.</p>
+
+          <form class="signup-form" id="signup-form">
+            <!--Get started-->
+            <button class="getstarted"><a href=signup.html>Get Started  &rarr;</a></button>
+            
+          </form>
+
+          <p id="form-message" class="form-message"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="logo">
+          <img src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="logo-mark small-logo"/>
+          StudyMachan
+        </div>
+
+        <div class="foot-cols">
+          <div class="foot-col">
+            <h4>Product</h4>
+            <a href="#how">How it works</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#focus">Focus mode</a>
+          </div>
+
+          <div class="foot-col">
+            <h4>Trust</h4>
+            <a href="#safety">Safety center</a>
+            <a href="#">Privacy policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© 2026 StudyMachan. Affordable tutoring for everyone.</span>
+        <span>Colombo · Sri Lanka</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-out Drawer / Menu for Login & Contact Us -->
+  <div id="slide-drawer-backdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[100] opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  <aside id="slide-drawer" class="fixed top-0 right-0 h-full w-full max-w-sm bg-[#FFF4E8] border-l-2 border-[#2B1B12] z-[101] shadow-[-8px_0px_0px_0px_rgba(43,27,18,0.15)] flex flex-col justify-between p-6 transform translate-x-full transition-transform duration-300 ease-out overflow-y-auto" aria-label="Slide Menu">
+    <!-- Header of the slide -->
+    <div>
+      <div class="flex items-center justify-between pb-5 mb-6 border-b-2 border-[#2B1B12]/10">
+        <div class="flex items-center gap-2">
+          <img src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="w-8 h-8 rounded-lg border-2 border-[#2B1B12] object-cover" alt="StudyMachan Logo"/>
+          <span class="font-bold text-lg text-[#2B1B12]">StudyMachan</span>
+        </div>
+        <button id="close-slide-btn" type="button" aria-label="Close slide menu" class="w-9 h-9 rounded-full bg-white border-2 border-[#2B1B12] flex items-center justify-center font-bold text-base text-[#2B1B12] shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-[#FFE9D3] active:translate-y-[1px] active:translate-x-[1px] active:shadow-none transition-all cursor-pointer">
+          ✕
+        </button>
+      </div>
+
+      <!-- Quick Actions Header -->
+      <div class="mb-6">
+        <span class="text-xs font-mono font-bold uppercase tracking-wider text-[#6B5646] px-2.5 py-1 rounded-full border border-[#2B1B12]/20 bg-white/60 inline-block mb-3">
+          Account & Support
+        </span>
+        <h3 class="text-xl font-extrabold text-[#2B1B12]">
+          Ready to learn or reach out?
+        </h3>
+        <p class="text-sm text-[#6B5646] mt-1">
+          Access your student or tutor desk, or get in touch with our team anytime.
+        </p>
+      </div>
+
+      <!-- Action Buttons: Log in and Contact Us -->
+      <div class="space-y-3 mb-8">
+        <a href="signup.html?mode=login" id="slide-login-btn" class="w-full bg-[#E8672F] text-white border-2 border-[#2B1B12] rounded-full py-3.5 px-5 font-bold text-base shadow-[4px_4px_0px_0px_#2B1B12] hover:bg-[#FF7F4C] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 text-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"></path>
+          </svg>
+          <span>Log in to Desk</span>
+        </a>
+
+        <a href="signup.html" id="slide-signup-btn" class="w-full bg-[#FFC24B] text-[#2B1B12] border-2 border-[#2B1B12] rounded-full py-3.5 px-5 font-bold text-base shadow-[4px_4px_0px_0px_#2B1B12] hover:bg-[#FFD370] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 text-center">
+          <span>Create an Account</span>
+        </a>
+
+        <a href="Contact us.html" id="slide-contact-btn" class="w-full bg-white text-[#2B1B12] border-2 border-[#2B1B12] rounded-full py-3.5 px-5 font-bold text-base shadow-[4px_4px_0px_0px_#2B1B12] hover:bg-[#FFE9D3] active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 text-center">
+          <svg class="w-5 h-5 text-[#E8672F]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          <span>Contact Us</span>
+        </a>
+      </div>
+
+      <!-- Quick Navigation Links inside slide -->
+      <div class="pt-4 border-t-2 border-[#2B1B12]/10">
+        <p class="text-xs font-mono font-bold uppercase tracking-wider text-[#6B5646] mb-3">Quick Navigation</p>
+        <nav class="flex flex-col space-y-1.5 text-sm font-semibold text-[#2B1B12]">
+          <a href="#how" class="slide-nav-link p-2 rounded-xl hover:bg-white/80 transition-colors">How it works</a>
+          <a href="#pricing" class="slide-nav-link p-2 rounded-xl hover:bg-white/80 transition-colors">Pricing</a>
+          <a href="#safety" class="slide-nav-link p-2 rounded-xl hover:bg-white/80 transition-colors">Trust & safety</a>
+          <a href="#focus" class="slide-nav-link p-2 rounded-xl hover:bg-white/80 transition-colors">Focus mode</a>
+          <a href="#audience" class="slide-nav-link p-2 rounded-xl hover:bg-white/80 transition-colors">Who it's for</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Slide Footer -->
+    <div class="pt-6 mt-6 border-t-2 border-[#2B1B12]/10 text-xs text-[#6B5646] text-center">
+      © 2026 StudyMachan · Colombo, Sri Lanka
+    </div>
+  </aside>
+
+  <script src="landing-page.js"></script>
+</body>
+</html>

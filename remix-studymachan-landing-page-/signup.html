@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Account - StudyMachan</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="stylesheet" href="Signup.css">
+  <script src="Signup.js"></script>
+</head>
+<body class="bg-cream-bg text-ink-text min-h-screen font-body-md antialiased overflow-x-hidden">
+  <!-- Header -->
+  <header class="absolute top-0 left-0 w-full px-margin-mobile md:px-margin-desktop py-md flex items-center justify-between z-50">
+    <a class="flex items-center gap-2 group" href="landing-page.html">
+      <div class="Logo"><img alt="StudyMachan Logo" src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" /></div>
+      <span class="font-display-md text-display-md font-bold tracking-tight">StudyMachan</span>
+    </a>
+    <a href="landing-page.html" class="font-button-text text-sm text-ink-soft hover:text-orange-deep transition-colors">
+      &larr; Back to home
+    </a>
+  </header>
+
+  <!-- Main Content -->
+  <main class="min-h-screen w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-32 pb-12 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
+    <!-- Left Column: Welcome & Social Proof -->
+    <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+      <h1 class="font-display-xl text-display-xl lg:text-[64px] lg:leading-[1.1] font-extrabold mb-4" id="left-heading">
+        Join the <br class="hidden lg:block"/>
+        <span class="relative inline-block">
+          classroom.
+          <svg class="absolute w-full h-4 -bottom-1 left-0 text-accent-yellow -z-10" preserveAspectRatio="none" viewBox="0 0 100 20">
+            <path d="M0,10 Q50,20 100,5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="8"></path>
+          </svg>
+        </span>
+      </h1>
+      <p class="font-body-lg text-body-lg text-ink-soft mb-12 max-w-md" id="left-subheading">
+        Connect with great tutors for a fraction of the cost. Start learning today.
+      </p>
+
+      <!-- Stickers / Social Proof -->
+      <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-12 relative">
+        <svg class="hidden lg:block absolute top-1/2 left-20 w-32 h-12 text-ink-soft -z-10" fill="none" viewBox="0 0 100 50">
+          <path d="M0,25 Q50,-10 100,25" fill="none" stroke="currentColor" stroke-dasharray="4 4" stroke-width="2"></path>
+        </svg>
+        <div class="bg-accent-yellow border-2 border-ink-text rounded-full w-28 h-28 flex flex-col items-center justify-center shadow-[4px_4px_0px_0px_#2B1B12] rotate-[-6deg] hover:rotate-[-2deg] transition-transform">
+          <span class="font-display-md text-display-md font-bold block leading-none">12k+</span>
+          <span class="font-label-mono text-label-mono text-xs uppercase block mt-1">Students</span>
+        </div>
+        <div class="bg-teal-deep text-white border-2 border-ink-text rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-[4px_4px_0px_0px_#2B1B12] rotate-[8deg] hover:rotate-[4deg] transition-transform lg:ml-16">
+          <span class="font-display-md text-[24px] font-bold block leading-none">3k+</span>
+          <span class="font-label-mono text-label-mono text-xs uppercase block mt-1">Tutors</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Auth Card -->
+    <div class="w-full lg:w-1/2 max-w-md">
+      <div class="bg-white rounded-[28px] border-2 border-ink-text p-6 md:p-8 shadow-[8px_8px_0px_0px_#2B1B12] relative overflow-hidden">
+        <!-- Top Right Tape Decoration -->
+        <div class="absolute -top-4 -right-4 w-16 h-8 bg-[#fff]/50 backdrop-blur-sm border border-ink-text/20 rotate-45 z-10 hidden md:block"></div>
+
+        <!-- AUTH FORM CONTAINER (Sign Up & Sign In) -->
+        <div id="auth-form-container">
+          <!-- Role Toggle -->
+          <div class="flex p-1 bg-surface-container border-2 border-ink-text rounded-full mb-8 relative" id="role-toggle-wrapper">
+            <div class="w-1/2 bg-white border-2 border-ink-text rounded-full shadow-[2px_2px_0px_0px_#2B1B12] absolute top-1 bottom-1 left-1 z-0 transition-transform duration-300" id="role-indicator"></div>
+            <button class="w-1/2 py-2 text-center font-button-text text-button-text z-10 relative" id="role-student-btn" type="button">I'm a Student</button>
+            <button class="w-1/2 py-2 text-center font-button-text text-button-text z-10 relative text-ink-soft" id="role-tutor-btn" type="button">I'm a Tutor</button>
+          </div>
+
+          <!-- Social Login -->
+          <div class="space-y-3 mb-6">
+            <button id="google-login-btn" type="button" class="w-full bg-white border-2 border-ink-text rounded-full py-3 px-4 flex items-center justify-center gap-3 shadow-[2px_2px_0px_0px_#2B1B12] hover:bg-surface-bright active:translate-y-[2px] active:translate-x-[2px] active:shadow-none transition-all font-button-text text-button-text">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+              </svg>
+              <span id="google-btn-text">Continue with Google</span>
+            </button>
+          </div>
+
+          <!-- Divider -->
+          <div class="flex items-center gap-4 mb-6">
+            <div class="flex-1 h-px bg-border-line"></div>
+            <div class="font-label-mono text-label-mono text-ink-soft text-xs" id="divider-text">Or sign up with email</div>
+            <div class="flex-1 h-px bg-border-line"></div>
+          </div>
+
+          <!-- Alert / Error Message Display -->
+          <div id="auth-alert" class="hidden mb-4 p-3.5 rounded-2xl border-2 border-ink-text font-button-text text-sm transition-all shadow-[2px_2px_0px_0px_#2B1B12]">
+            <div class="flex items-center gap-2">
+              <span id="alert-icon" class="text-base">⚠️</span>
+              <span id="alert-message"></span>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form id="auth-form" class="space-y-4">
+            <div id="name-field-wrapper">
+              <label class="block font-button-text text-sm mb-1 ml-2" for="name">Full Name</label>
+              <input class="w-full bg-white border-2 border-ink-text rounded-full py-3 px-4 focus:outline-none focus:ring-0 focus:border-orange-deep transition-colors" id="name" placeholder="e.g. Jane Doe" type="text" />
+            </div>
+            <div>
+              <label class="block font-button-text text-sm mb-1 ml-2" for="email">Email Address</label>
+              <input class="w-full bg-white border-2 border-ink-text rounded-full py-3 px-4 focus:outline-none focus:ring-0 focus:border-orange-deep transition-colors" id="email" placeholder="you@school.edu" type="email" required />
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-1 ml-2 mr-2">
+                <label class="block font-button-text text-sm" for="password">Password</label>
+                <button type="button" id="forgot-password-link" class="hidden text-xs font-button-text text-ink-soft hover:text-orange-deep transition-colors underline decoration-1 underline-offset-2">Forgot password?</button>
+              </div>
+              <div class="relative flex items-center">
+                <input class="w-full bg-white border-2 border-ink-text rounded-full py-3 pl-4 pr-12 focus:outline-none focus:ring-0 focus:border-orange-deep transition-colors" id="password" placeholder="••••••••" type="password" required />
+                <button type="button" id="toggle-password-visibility-btn" aria-label="Show password" title="Show password" class="absolute right-3.5 top-1/2 -translate-y-1/2 p-1.5 text-ink-soft hover:text-ink-text focus:outline-none transition-colors">
+                  <!-- Eye Open Icon (hidden when password is shown) -->
+                  <svg id="eye-icon-show" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                  <!-- Eye Slash Icon (hidden when password is masked) -->
+                  <svg id="eye-icon-hide" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l18 18" />
+                  </svg>
+                </button>
+              </div>
+              <!-- Remember Me Checkbox -->
+              <div id="remember-me-wrapper" class="hidden flex items-center justify-between mt-2.5 ml-1 select-none">
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="checkbox" id="remember-me" checked class="w-4 h-4 rounded border-2 border-ink-text text-orange-deep focus:ring-0 focus:ring-offset-0 cursor-pointer accent-[#E65100]" />
+                  <span class="font-button-text text-xs text-ink-soft group-hover:text-ink-text transition-colors">Remember me</span>
+                </label>
+              </div>
+            </div>
+            <button id="submit-btn" class="w-full mt-6 bg-orange-deep text-white border-2 border-ink-text rounded-full py-4 px-6 font-display-md text-[20px] shadow-[4px_4px_0px_0px_#2B1B12] hover:bg-primary active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all flex items-center justify-center gap-2" type="submit">
+              <span id="submit-btn-text">Create my account</span>
+              <span id="submit-btn-spinner" class="hidden animate-spin">⏳</span>
+            </button>
+          </form>
+
+          <!-- Toggle Mode (Sign Up / Sign In) -->
+          <div class="mt-6 text-center">
+            <button id="toggle-mode-btn" type="button" class="font-button-text text-button-text text-ink-soft hover:text-orange-deep transition-colors underline decoration-2 underline-offset-4">
+              Already have an account? Log in
+            </button>
+          </div>
+        </div>
+
+        <!-- FORGOT PASSWORD SCREEN -->
+        <div id="forgot-password-screen" class="hidden text-center py-2">
+          <!-- Key / Reset Icon Badge -->
+          <div class="w-20 h-20 mx-auto mb-6 bg-accent-yellow border-2 border-ink-text rounded-full flex items-center justify-center shadow-[4px_4px_0px_0px_#2B1B12]">
+            <svg class="w-10 h-10 text-ink-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+            </svg>
+          </div>
+
+          <h2 class="font-display-md text-[26px] font-bold mb-2 text-ink-text">Reset Password</h2>
+          <p class="font-body-md text-sm text-ink-soft mb-6 max-w-xs mx-auto">
+            Enter your registered email address and we'll send you a password recovery link.
+          </p>
+
+          <!-- Reset Alert Display -->
+          <div id="reset-alert" class="hidden mb-4 p-3.5 rounded-2xl border-2 border-ink-text font-button-text text-sm transition-all shadow-[2px_2px_0px_0px_#2B1B12] text-left">
+            <div class="flex items-center gap-2">
+              <span id="reset-alert-icon" class="text-base">⚠️</span>
+              <span id="reset-alert-message"></span>
+            </div>
+          </div>
+
+          <!-- Reset Form -->
+          <form id="reset-form" class="space-y-4 text-left">
+            <div>
+              <label class="block font-button-text text-sm mb-1 ml-2" for="reset-email">Email Address</label>
+              <input class="w-full bg-white border-2 border-ink-text rounded-full py-3 px-4 focus:outline-none focus:ring-0 focus:border-orange-deep transition-colors" id="reset-email" placeholder="you@school.edu" type="email" required />
+            </div>
+
+            <button id="reset-submit-btn" class="w-full mt-6 bg-orange-deep text-white border-2 border-ink-text rounded-full py-4 px-6 font-display-md text-[20px] shadow-[4px_4px_0px_0px_#2B1B12] hover:bg-primary active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all flex items-center justify-center gap-2" type="submit">
+              <span id="reset-submit-btn-text">Send Reset Link</span>
+              <span id="reset-submit-btn-spinner" class="hidden animate-spin">⏳</span>
+            </button>
+          </form>
+
+          <div class="mt-6 text-center">
+            <button id="reset-back-btn" type="button" class="font-button-text text-button-text text-ink-soft hover:text-orange-deep transition-colors underline decoration-2 underline-offset-4">
+              &larr; Back to Log in
+            </button>
+          </div>
+        </div>
+
+        <!-- VERIFICATION SCREEN -->
+        <div id="verification-screen" class="hidden text-center py-2">
+          <!-- Mail Icon Badge -->
+          <div class="w-20 h-20 mx-auto mb-6 bg-accent-yellow border-2 border-ink-text rounded-full flex items-center justify-center shadow-[4px_4px_0px_0px_#2B1B12]">
+            <svg class="w-10 h-10 text-ink-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+
+          <h2 class="font-display-md text-[26px] font-bold mb-4 text-ink-text">Verify Your Email</h2>
+          
+          <!-- Exact Required Verification Message Container -->
+          <div class="bg-cream-bg border-2 border-ink-text rounded-2xl p-5 mb-6 text-left shadow-[2px_2px_0px_0px_#2B1B12]">
+            <p id="verification-message-text" class="font-body-md text-ink-text text-base leading-relaxed">
+              “We have sent you a verification email to <span id="verification-target-email" class="font-bold text-orange-deep underline"></span>. Please verify it and log in.”
+            </p>
+          </div>
+
+          <!-- Included Login Button -->
+          <button id="verification-login-btn" type="button" class="w-full bg-orange-deep text-white border-2 border-ink-text rounded-full py-4 px-6 font-display-md text-[20px] shadow-[4px_4px_0px_0px_#2B1B12] hover:bg-primary active:translate-y-[4px] active:translate-x-[4px] active:shadow-none transition-all">
+            Login
+          </button>
+
+          <!-- Back / Resend links -->
+          <div class="mt-6 flex flex-col items-center gap-2">
+            <button id="verification-resend-btn" type="button" class="font-button-text text-sm text-ink-soft hover:text-orange-deep transition-colors underline decoration-2 underline-offset-4">
+              Didn't receive it? Resend verification email
+            </button>
+            <button id="verification-back-btn" type="button" class="font-button-text text-xs text-ink-soft hover:text-ink-text transition-colors mt-2">
+              &larr; Use a different email
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Firebase Auth Controller Script -->
+  <script type="module">
+    import { 
+      registerWithEmail, 
+      loginWithEmail, 
+      loginWithGoogle, 
+      resendVerificationEmail,
+      sendPasswordReset,
+      auth 
+    } from "./firebase-auth.js";
+    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+
+    // App state
+    let isLoginMode = false;
+    let pendingVerificationEmail = "";
+    let selectedRole = localStorage.getItem("studymachan_user_role") || "student";
+
+    // DOM Elements
+    const authFormContainer = document.getElementById("auth-form-container");
+    const verificationScreen = document.getElementById("verification-screen");
+    const forgotPasswordScreen = document.getElementById("forgot-password-screen");
+    const authForm = document.getElementById("auth-form");
+    const nameFieldWrapper = document.getElementById("name-field-wrapper");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const nameInput = document.getElementById("name");
+    const rememberMeWrapper = document.getElementById("remember-me-wrapper");
+    const rememberMeCheckbox = document.getElementById("remember-me");
+    const submitBtn = document.getElementById("submit-btn");
+    const submitBtnText = document.getElementById("submit-btn-text");
+    const submitBtnSpinner = document.getElementById("submit-btn-spinner");
+    const toggleModeBtn = document.getElementById("toggle-mode-btn");
+    const googleBtn = document.getElementById("google-login-btn");
+    const googleBtnText = document.getElementById("google-btn-text");
+    const dividerText = document.getElementById("divider-text");
+    const leftHeading = document.getElementById("left-heading");
+    const leftSubheading = document.getElementById("left-subheading");
+    const authAlert = document.getElementById("auth-alert");
+    const alertMessage = document.getElementById("alert-message");
+    const alertIcon = document.getElementById("alert-icon");
+    const roleIndicator = document.getElementById("role-indicator");
+    const roleStudentBtn = document.getElementById("role-student-btn");
+    const roleTutorBtn = document.getElementById("role-tutor-btn");
+    const verificationMessageText = document.getElementById("verification-message-text");
+    const verificationTargetEmail = document.getElementById("verification-target-email");
+    const verificationLoginBtn = document.getElementById("verification-login-btn");
+    const verificationResendBtn = document.getElementById("verification-resend-btn");
+    const verificationBackBtn = document.getElementById("verification-back-btn");
+
+    // Forgot Password DOM Elements
+    const forgotPasswordLink = document.getElementById("forgot-password-link");
+    const resetForm = document.getElementById("reset-form");
+    const resetEmailInput = document.getElementById("reset-email");
+    const resetSubmitBtn = document.getElementById("reset-submit-btn");
+    const resetSubmitBtnText = document.getElementById("reset-submit-btn-text");
+    const resetSubmitBtnSpinner = document.getElementById("reset-submit-btn-spinner");
+    const resetAlert = document.getElementById("reset-alert");
+    const resetAlertMessage = document.getElementById("reset-alert-message");
+    const resetAlertIcon = document.getElementById("reset-alert-icon");
+    const resetBackBtn = document.getElementById("reset-back-btn");
+
+    // Check query params for initial mode & role
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("role") === "tutor") {
+      selectedRole = "tutor";
+      localStorage.setItem("studymachan_user_role", "tutor");
+    } else if (urlParams.get("role") === "student") {
+      selectedRole = "student";
+      localStorage.setItem("studymachan_user_role", "student");
+    }
+
+    if (urlParams.get("mode") === "login") {
+      setMode(true);
+    } else if (urlParams.get("mode") === "reset" || urlParams.get("mode") === "forgot") {
+      showForgotPasswordScreen();
+    }
+
+    // Function to update role UI
+    function updateRoleUI(role) {
+      selectedRole = role;
+      localStorage.setItem("studymachan_user_role", role);
+      if (role === "tutor") {
+        if (roleIndicator) roleIndicator.style.transform = "translateX(calc(100% - 8px))";
+        if (roleTutorBtn) roleTutorBtn.classList.remove("text-ink-soft");
+        if (roleStudentBtn) roleStudentBtn.classList.add("text-ink-soft");
+      } else {
+        if (roleIndicator) roleIndicator.style.transform = "translateX(0)";
+        if (roleStudentBtn) roleStudentBtn.classList.remove("text-ink-soft");
+        if (roleTutorBtn) roleTutorBtn.classList.add("text-ink-soft");
+      }
+    }
+
+    // Initialize Role UI
+    if (selectedRole === "tutor") {
+      updateRoleUI("tutor");
+    }
+
+    // Password Visibility Toggle Elements
+    const togglePasswordVisibilityBtn = document.getElementById("toggle-password-visibility-btn");
+    const eyeIconShow = document.getElementById("eye-icon-show");
+    const eyeIconHide = document.getElementById("eye-icon-hide");
+
+    if (togglePasswordVisibilityBtn && passwordInput) {
+      togglePasswordVisibilityBtn.addEventListener("click", () => {
+        const isPassword = passwordInput.getAttribute("type") === "password";
+        if (isPassword) {
+          passwordInput.setAttribute("type", "text");
+          eyeIconShow.classList.add("hidden");
+          eyeIconHide.classList.remove("hidden");
+          togglePasswordVisibilityBtn.setAttribute("aria-label", "Hide password");
+          togglePasswordVisibilityBtn.setAttribute("title", "Hide password");
+        } else {
+          passwordInput.setAttribute("type", "password");
+          eyeIconShow.classList.remove("hidden");
+          eyeIconHide.classList.add("hidden");
+          togglePasswordVisibilityBtn.setAttribute("aria-label", "Show password");
+          togglePasswordVisibilityBtn.setAttribute("title", "Show password");
+        }
+      });
+    }
+
+    // Role Indicator switches
+    if (roleStudentBtn && roleTutorBtn && roleIndicator) {
+      roleStudentBtn.addEventListener("click", () => {
+        updateRoleUI("student");
+      });
+      roleTutorBtn.addEventListener("click", () => {
+        updateRoleUI("tutor");
+      });
+    }
+
+    // Toggle between Sign Up and Sign In modes
+    function setMode(loginMode) {
+      isLoginMode = loginMode;
+      hideAlert();
+      hideResetAlert();
+      forgotPasswordScreen.classList.add("hidden");
+      verificationScreen.classList.add("hidden");
+      authFormContainer.classList.remove("hidden");
+      
+      if (isLoginMode) {
+        nameFieldWrapper.classList.add("hidden");
+        forgotPasswordLink.classList.remove("hidden");
+        if (rememberMeWrapper) rememberMeWrapper.classList.remove("hidden");
+        submitBtnText.textContent = "Log in";
+        toggleModeBtn.textContent = "Don't have an account? Sign up";
+        dividerText.textContent = "Or sign in with email";
+        googleBtnText.textContent = "Sign in with Google";
+        leftHeading.innerHTML = `Welcome <br class="hidden lg:block"/><span class="relative inline-block">back.<svg class="absolute w-full h-4 -bottom-1 left-0 text-accent-yellow -z-10" preserveAspectRatio="none" viewBox="0 0 100 20"><path d="M0,10 Q50,20 100,5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="8"></path></svg></span>`;
+        leftSubheading.textContent = "Log in to connect with your tutors and continue your learning journey.";
+        document.title = "Log In - StudyMachan";
+      } else {
+        nameFieldWrapper.classList.remove("hidden");
+        forgotPasswordLink.classList.add("hidden");
+        if (rememberMeWrapper) rememberMeWrapper.classList.add("hidden");
+        submitBtnText.textContent = "Create my account";
+        toggleModeBtn.textContent = "Already have an account? Log in";
+        dividerText.textContent = "Or sign up with email";
+        googleBtnText.textContent = "Continue with Google";
+        leftHeading.innerHTML = `Join the <br class="hidden lg:block"/><span class="relative inline-block">classroom.<svg class="absolute w-full h-4 -bottom-1 left-0 text-accent-yellow -z-10" preserveAspectRatio="none" viewBox="0 0 100 20"><path d="M0,10 Q50,20 100,5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="8"></path></svg></span>`;
+        leftSubheading.textContent = "Connect with great tutors for a fraction of the cost. Start learning today.";
+        document.title = "Sign Up - StudyMachan";
+      }
+    }
+
+    toggleModeBtn.addEventListener("click", () => {
+      setMode(!isLoginMode);
+    });
+
+    // Alert helpers
+    function showAlert(message, type = "error") {
+      authAlert.classList.remove("hidden");
+      alertMessage.textContent = message;
+      if (type === "error") {
+        authAlert.className = "mb-4 p-3.5 rounded-2xl border-2 border-ink-text bg-[#FFDAD6] text-[#BA1A1A] font-button-text text-sm transition-all shadow-[2px_2px_0px_0px_#2B1B12]";
+        alertIcon.textContent = "⚠️";
+      } else if (type === "success") {
+        authAlert.className = "mb-4 p-3.5 rounded-2xl border-2 border-ink-text bg-[#94F5D6] text-[#005140] font-button-text text-sm transition-all shadow-[2px_2px_0px_0px_#2B1B12]";
+        alertIcon.textContent = "✓";
+      }
+    }
+
+    function hideAlert() {
+      authAlert.classList.add("hidden");
+    }
+
+    function showResetAlert(message, type = "error") {
+      resetAlert.classList.remove("hidden");
+      resetAlertMessage.textContent = message;
+      if (type === "error") {
+        resetAlert.className = "mb-4 p-3.5 rounded-2xl border-2 border-ink-text bg-[#FFDAD6] text-[#BA1A1A] font-button-text text-sm transition-all shadow-[2px_2px_0px_0px_#2B1B12] text-left";
+        resetAlertIcon.textContent = "⚠️";
+      } else if (type === "success") {
+        resetAlert.className = "mb-4 p-3.5 rounded-2xl border-2 border-ink-text bg-[#94F5D6] text-[#005140] font-button-text text-sm transition-all shadow-[2px_2px_0px_0px_#2B1B12] text-left";
+        resetAlertIcon.textContent = "✓";
+      }
+    }
+
+    function hideResetAlert() {
+      resetAlert.classList.add("hidden");
+    }
+
+    // Show Forgot Password Screen
+    function showForgotPasswordScreen() {
+      hideAlert();
+      hideResetAlert();
+      authFormContainer.classList.add("hidden");
+      verificationScreen.classList.add("hidden");
+      forgotPasswordScreen.classList.remove("hidden");
+      
+      // Pre-fill email from the main form if user has entered one
+      if (emailInput.value.trim()) {
+        resetEmailInput.value = emailInput.value.trim();
+      }
+      resetEmailInput.focus();
+    }
+
+    forgotPasswordLink.addEventListener("click", () => {
+      showForgotPasswordScreen();
+    });
+
+    resetBackBtn.addEventListener("click", () => {
+      setMode(true);
+    });
+
+    // Reset Form Submission
+    resetForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      hideResetAlert();
+
+      const email = resetEmailInput.value.trim();
+      if (!email) {
+        showResetAlert("Please enter your registered email address.");
+        return;
+      }
+
+      resetSubmitBtn.disabled = true;
+      resetSubmitBtnSpinner.classList.remove("hidden");
+
+      const res = await sendPasswordReset(email);
+      resetSubmitBtn.disabled = false;
+      resetSubmitBtnSpinner.classList.add("hidden");
+
+      if (res.success) {
+        showResetAlert(`A password reset link has been sent to ${email}. Please check your inbox and follow the instructions to reset your password.`, "success");
+      } else {
+        showResetAlert(res.error || "Failed to send password reset email. Please check the email address and try again.");
+      }
+    });
+
+    // Show Verification Screen with exact required text
+    function showVerificationScreen(email) {
+      pendingVerificationEmail = email;
+      authFormContainer.classList.add("hidden");
+      forgotPasswordScreen.classList.add("hidden");
+      verificationScreen.classList.remove("hidden");
+      verificationTargetEmail.textContent = email;
+      
+      // Update text: “We have sent you a verification email to [user email]. Please verify it and log in.”
+      verificationMessageText.innerHTML = `“We have sent you a verification email to <span class="font-bold text-orange-deep underline">${email}</span>. Please verify it and log in.”`;
+    }
+
+    // Back to Login from Verification Screen
+    verificationLoginBtn.addEventListener("click", () => {
+      verificationScreen.classList.add("hidden");
+      authFormContainer.classList.remove("hidden");
+      setMode(true);
+      emailInput.value = pendingVerificationEmail;
+      passwordInput.value = "";
+      passwordInput.focus();
+      showAlert("Please enter your password to log in after verifying your email.", "success");
+    });
+
+    // Resend Verification Email
+    verificationResendBtn.addEventListener("click", async () => {
+      if (!pendingVerificationEmail) return;
+      verificationResendBtn.disabled = true;
+      verificationResendBtn.textContent = "Sending verification email...";
+      
+      const pwd = passwordInput.value;
+      if (pwd) {
+        await resendVerificationEmail(pendingVerificationEmail, pwd);
+        verificationResendBtn.textContent = "✓ New verification email sent!";
+      } else {
+        verificationResendBtn.textContent = "✓ Please log in with password to re-trigger verification.";
+      }
+      setTimeout(() => {
+        verificationResendBtn.disabled = false;
+        verificationResendBtn.textContent = "Didn't receive it? Resend verification email";
+      }, 5000);
+    });
+
+    verificationBackBtn.addEventListener("click", () => {
+      verificationScreen.classList.add("hidden");
+      authFormContainer.classList.remove("hidden");
+      hideAlert();
+    });
+
+    // Form Submission
+    authForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      hideAlert();
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      if (!email || !password) {
+        showAlert("Please fill in both email and password.");
+        return;
+      }
+
+      // UI Loading state
+      submitBtn.disabled = true;
+      submitBtnSpinner.classList.remove("hidden");
+
+      // Helper to determine destination dashboard based on role
+      const getTargetDashboard = () => {
+        const role = selectedRole || localStorage.getItem("studymachan_user_role") || "student";
+        return role === "tutor" ? "tutor-dashboard.html" : "dashboard.html";
+      };
+
+      if (!isLoginMode) {
+        // SIGN UP FLOW
+        // Persist the selected role so when they verify email and log in, their role is maintained
+        localStorage.setItem("studymachan_user_role", selectedRole);
+
+        const res = await registerWithEmail(email, password);
+        submitBtn.disabled = false;
+        submitBtnSpinner.classList.add("hidden");
+
+        if (res.success) {
+          // Show Verification Screen with exact message
+          showVerificationScreen(res.email);
+        } else {
+          // Required message: "User already exists. Please sign in"
+          showAlert(res.error || "User already exists. Please sign in");
+        }
+      } else {
+        // SIGN IN FLOW
+        const rememberMe = rememberMeCheckbox ? rememberMeCheckbox.checked : true;
+        const res = await loginWithEmail(email, password, rememberMe);
+        submitBtn.disabled = false;
+        submitBtnSpinner.classList.add("hidden");
+
+        if (res.success) {
+          // Redirect to student or tutor dashboard based on role
+          window.location.href = getTargetDashboard();
+        } else if (res.needsVerification) {
+          // Block access and show verification screen
+          showVerificationScreen(res.email);
+        } else {
+          // Required message: "Email or password is incorrect"
+          showAlert(res.error || "Email or password is incorrect");
+        }
+      }
+    });
+
+    // Google Sign-in
+    googleBtn.addEventListener("click", async () => {
+      hideAlert();
+      googleBtn.disabled = true;
+      const originalBtnHtml = googleBtn.innerHTML;
+      const googleBtnText = document.getElementById("google-btn-text");
+      if (googleBtnText) googleBtnText.textContent = "Connecting to Google...";
+
+      try {
+        const rememberMe = rememberMeCheckbox ? rememberMeCheckbox.checked : true;
+        const res = await loginWithGoogle(rememberMe);
+
+        if (res.success) {
+          const role = selectedRole || localStorage.getItem("studymachan_user_role") || "student";
+          window.location.href = role === "tutor" ? "tutor-dashboard.html" : "dashboard.html";
+        } else if (res.error) {
+          showAlert(res.error);
+        }
+      } catch (err) {
+        console.error("Google sign in unexpected error:", err);
+        showAlert(err.message || "An error occurred with Google Sign-in. Please try again.");
+      } finally {
+        googleBtn.disabled = false;
+        if (googleBtnText) googleBtnText.textContent = "Continue with Google";
+      }
+    });
+
+    // Auto-check if already logged in and verified
+    onAuthStateChanged(auth, (user) => {
+      if (user && user.emailVerified) {
+        // Already authenticated and verified -> go to dashboard
+        // Note: do not redirect if we are actively showing verification or forgot password screens
+        if (verificationScreen.classList.contains("hidden") && forgotPasswordScreen.classList.contains("hidden")) {
+          const role = selectedRole || localStorage.getItem("studymachan_user_role") || "student";
+          window.location.href = role === "tutor" ? "tutor-dashboard.html" : "dashboard.html";
+        }
+      }
+    });
+  </script>
+</body>
+</html>
