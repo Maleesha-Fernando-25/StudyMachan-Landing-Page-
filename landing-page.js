@@ -25,22 +25,3 @@ tabButtons.forEach((button) => {
   });
 });
 
-const signupForm = document.querySelector("#signup-form");
-const emailInput = document.querySelector("#email");
-const formMessage = document.querySelector("#form-message");
-
-signupForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const email = emailInput.value.trim();
-
-  if (email === "") {
-    formMessage.textContent = "Please enter your email address.";
-    return;
-  }
-
-  formMessage.textContent =
-    "Thank you! Your interest in StudyMachan has been recorded.";
-
-  emailInput.value = "";
-});

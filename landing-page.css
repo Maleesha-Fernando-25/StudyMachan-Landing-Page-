@@ -88,6 +88,13 @@ section {
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+#login {
+  height: 50%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 1;
+}
+
 /*btn_getstarted*/
 .getstarted{
   font-size: 15px;
@@ -260,6 +267,10 @@ header {
 }
 
 #contact{
+  height: 50%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 1;
   position: relative;
   top:5px;
   display: inline-block;
@@ -269,8 +280,12 @@ header {
 }
 
 #login{
+  height: 50%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 1;
   position: relative;
-  top: 5px;
+  top: 4px;
   display: inline-block;
   color: #faf7f6;
   background-color: #e8672f;
