@@ -237,7 +237,7 @@
       sendPasswordReset,
       auth 
     } from "./firebase-auth.js";
-    import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+    import { getRedirectResult, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
 
     // App state
     let isLoginMode = false;
@@ -275,6 +275,19 @@
     const verificationLoginBtn = document.getElementById("verification-login-btn");
     const verificationResendBtn = document.getElementById("verification-resend-btn");
     const verificationBackBtn = document.getElementById("verification-back-btn");
+
+    // Complete Google sign-in when the popup fallback returns to this page.
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result && result.user) {
+          const role = selectedRole || localStorage.getItem("studymachan_user_role") || "student";
+          window.location.href = role === "tutor" ? "tutor-dashboard.html" : "dashboard.html";
+        }
+      })
+      .catch((error) => {
+        console.error("Google redirect sign in error:", error);
+        showAlert(error.message || "An error occurred with Google Sign-in. Please try again.");
+      });
 
     // Forgot Password DOM Elements
     const forgotPasswordLink = document.getElementById("forgot-password-link");
@@ -607,7 +620,7 @@
         showAlert(err.message || "An error occurred with Google Sign-in. Please try again.");
       } finally {
         googleBtn.disabled = false;
-        if (googleBtnText) googleBtnText.textContent = "Continue with Google";
+        if (googleBtnText) googleBtnText.textContent = isLoginMode ? "Sign in with Google" : "Continue with Google";
       }
     });
 

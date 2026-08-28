@@ -12,7 +12,8 @@ import {
   signOut,
   onAuthStateChanged,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  signInWithRedirect
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
 
 // Your web app's Firebase configuration
@@ -143,13 +144,8 @@ export async function loginWithEmail(email, password, rememberMe = true) {
  */
 export async function loginWithGoogle(rememberMe = true) {
   try {
-    // Attempt non-blocking persistence setting so the synchronous click-gesture stack is not severed
-    try {
-      const persistenceType = rememberMe ? browserLocalPersistence : browserSessionPersistence;
-      setPersistence(auth, persistenceType).catch(() => {});
-    } catch (e) {
-      // Ignore persistence setup warnings
-    }
+    const persistenceType = rememberMe ? browserLocalPersistence : browserSessionPersistence;
+    await setPersistence(auth, persistenceType);
 
     const result = await signInWithPopup(auth, googleProvider);
     return {
@@ -163,10 +159,9 @@ export async function loginWithGoogle(rememberMe = true) {
       return { success: false, error: null };
     }
     if (error.code === 'auth/popup-blocked') {
-      return {
-        success: false,
-        error: "The Google sign-in popup was blocked by your browser. Please allow popups for this page or open this app in a new tab."
-      };
+      // Fall back to a full-page redirect when popups are unavailable.
+      await signInWithRedirect(auth, googleProvider);
+      return { success: false, error: null, redirecting: true };
     }
     if (error.code === 'auth/unauthorized-domain') {
       const hostname = window.location.hostname || "this domain";
