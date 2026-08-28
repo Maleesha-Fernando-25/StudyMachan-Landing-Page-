@@ -1,6 +1,6 @@
 {
-  "name": "Remix StudyMachan-Landing-Page-",
-  "description": "Imported from GitHub: Maleesha-Fernando-25/StudyMachan-Landing-Page-",
+  "name": "StudyMachan",
+  "description": "StudyMachan tutor booking platform landing page, signup, and contact pages.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
