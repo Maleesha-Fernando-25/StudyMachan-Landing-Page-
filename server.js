@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
 // Serve all static assets from the current directory
@@ -43,6 +43,13 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'landing-page.html'));
 });
 
-app.listen(PORT, HOST, () => {
-  console.log(`StudyMachan server running at http://${HOST}:${PORT}`);
-});
+// Vercel invokes this file as a serverless function, so it needs the Express
+// app as the default export — it does the listening itself.
+export default app;
+
+// Only bind a port when running locally (npm run dev / npm start).
+if (!process.env.VERCEL) {
+  app.listen(PORT, HOST, () => {
+    console.log(`StudyMachan server running at http://${HOST}:${PORT}`);
+  });
+}
