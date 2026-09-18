@@ -67,10 +67,6 @@ ul {
 
 }
 
-.Browse-books{
-  font-size: 10px;
-}
-
 section {
   padding: 90px 0;
 }
@@ -572,10 +568,10 @@ header {
 }
 
 .section-head h2 {
-  
+  font-family: var(--font-display);
   font-size: clamp(30px, 3.6vw, 42px);
   margin-top: 13px;
-  line-height: 1.8;
+  line-height: 1.1;
 }
 
 .section-head p {
@@ -688,6 +684,15 @@ header {
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.pricing-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 38px);
+  line-height: 1.1;
+  margin-top: 14px;
 }
 
 .pill-tag {
@@ -821,7 +826,7 @@ header {
 }
 
 .new{
-  box-shadow: #090706;
+  box-shadow: 4px 4px 0 #090706;
 }
 .new .amount {
   color: var(--teal-deep);
@@ -838,11 +843,7 @@ header {
     border-radius: 10px;
     transition: 0.2s ease-in-out ;
     transform: scale(1.15); /* Scales image up by 15% */
-    box-shadow: 0 20px px rgba(0, 0, 0, 0.3); /* Optional elevation shadow */
-}
-
-.amount2::shadow{
-  box-shadow: #090706;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* Optional elevation shadow */
 }
 
 

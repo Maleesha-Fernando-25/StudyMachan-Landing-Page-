@@ -6,16 +6,36 @@
   <title>StudyMachan — Book a great tutor, not a big name.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
- <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
--->
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS for samples -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!--<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">-->
+  <!-- All three families the stylesheet asks for: Baloo 2 (display), Plus Jakarta Sans (body), Space Mono (mono) -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS for samples -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    // The sample-lesson section uses brand-* utilities, which only exist once
+    // they are registered here. Values mirror the custom properties in :root.
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-cream': '#fff4e8',
+            'brand-cream-deep': '#ffe9d3',
+            'brand-ink': '#2b1b12',
+            'brand-ink-soft': '#6b5646',
+            'brand-orange': '#ff7f4c',
+            'brand-orange-deep': '#e8672f',
+            'brand-yellow': '#ffc24b',
+            'brand-teal': '#1f8a70',
+          },
+          boxShadow: {
+            'hard': '4px 4px 0 0 #2b1b12',
+            'hard-sm': '2px 2px 0 0 #2b1b12',
+          },
+        },
+      },
+    };
+  </script>
 
   <link rel="stylesheet" href="landing-page.css">
 </head>
@@ -24,7 +44,7 @@
   <header>
     <div class="wrap nav">
       <div class="logo">
-        <img src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="logo-mark"/>
+        <img src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="logo-mark" alt="StudyMachan logo"/>
         StudyMachan
       </div>
 
@@ -125,8 +145,8 @@
     <section id="how">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">The flow</span><br>
-          <h2 class="Browse-books" style="background-color: transparent; position:relative;font-size:34.5px; text-align: center; font-family:Arial;"><b>Getting a tutor shouldn't be a project.</b></h2>
+          <span class="eyebrow">The flow</span>
+          <h2>Getting a tutor shouldn't be a project.</h2>
         </div>
 
         <div class="steps">
@@ -153,9 +173,9 @@
 
 <!--Price comparison-->
 
-<section class="pricing-section">
+<section class="pricing-section" id="pricing">
     <div id="eyebrow" >THE MATH CHECKS OUT</div>
-    <h1 style="font-size: 30px;"><b>You're not paying for a brand. Just good teaching.</b></h1>
+    <h2>You're not paying for a brand. Just good teaching.</h2>
 
     <div class="pricing-container">
       <!-- Competitor Pricing -->
@@ -225,8 +245,8 @@
       </div>
     </section>
     
-    <section class="bg-brand-cream py-24 px-4 sm:px-6 lg:px-8">
-<div class="max-w-7xl mx-auto">
+    <section class="bg-brand-cream">
+<div class="wrap">
 <!-- Header -->
 <div class="mb-12">
 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-3 text-brand-ink">Watch a class before you pay for one</h2>
@@ -241,7 +261,7 @@
 <div class="absolute top-3 left-3 bg-yellow-400 border-2 border-brand-ink text-xs font-bold px-2 py-1 rounded shadow-hard-sm uppercase">Free Sample</div>
 <div class="absolute inset-0 flex items-center justify-center">
 <div class="w-12 h-12 bg-brand-orange border-2 border-brand-ink rounded-full flex items-center justify-center shadow-hard-sm group-hover:scale-110 transition-transform">
-<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd"></path>
 </svg>
 </div>
@@ -260,7 +280,7 @@
 <div class="absolute top-3 right-3 bg-white border-2 border-brand-ink text-xs font-bold px-2 py-1 rounded shadow-hard-sm">CHEMICAL BONDS</div>
 <div class="absolute inset-0 flex items-center justify-center">
 <div class="w-12 h-12 bg-brand-orange border-2 border-brand-ink rounded-full flex items-center justify-center shadow-hard-sm group-hover:scale-110 transition-transform">
-<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewbox="0 0 40 20" xmlns="http://www.w3.org/2000/svg">
+<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd"></path>
 </svg>
 </div>
@@ -278,7 +298,7 @@
 <div class="absolute top-3 left-3 bg-yellow-400 border-2 border-brand-ink text-xs font-bold px-2 py-1 rounded shadow-hard-sm uppercase">Free Sample</div>
 <div class="absolute inset-0 flex items-center justify-center">
 <div class="w-12 h-12 bg-brand-orange border-2 border-brand-ink rounded-full flex items-center justify-center shadow-hard-sm group-hover:scale-110 transition-transform">
-<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<svg class="h-6 w-6 text-white ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" fill-rule="evenodd"></path>
 </svg>
 </div>
@@ -452,13 +472,8 @@
           <h2>Stop paying for the name.<br>Start paying for the teaching.</h2>
           <p>Join free, browse tutors, and book your first session.</p>
 
-          <form class="signup-form" id="signup-form">
-            <!--Get started-->
-            <button class="getstarted"><a href=signup.html>Get Started  &rarr;</a></button>
-            
-          </form>
-
-          <p id="form-message" class="form-message"></p>
+          <!--Get started-->
+          <a class="getstarted" href="signup.html">Get Started &rarr;</a>
         </div>
       </div>
     </section>
@@ -468,7 +483,7 @@
     <div class="wrap">
       <div class="foot-grid">
         <div class="logo">
-          <img src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="logo-mark small-logo"/>
+          <img src="WhatsApp Image 2026-08-19 at 17.35.50.jpeg" class="logo-mark small-logo" alt="StudyMachan logo"/>
           StudyMachan
         </div>
 
