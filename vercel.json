@@ -3,7 +3,18 @@
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "*.html",
+          "*.css",
+          "landing-page.js",
+          "Signup.js",
+          "firebase-auth.js",
+          "*.jpeg",
+          "metadata.json"
+        ]
+      }
     }
   ],
   "routes": [
